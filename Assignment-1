@@ -1,0 +1,61 @@
+Theory -
+
+● What is Emmet?
+Emmet is built in VS code feature which on using shortcuts writes the entire boilerplate for HTML and CSS.
+This does not need any special extension installtion.
+
+
+● Difference between a Library and Framework?
+The main difference between library and Framework is "Inversion Control".
+The user who writes the code has the control while using librarry and he decides when to call certain calls present in it.
+Whereas in case of Framework, the framework decides when to make certain calls.Framework can contain library.
+Library can be used for part of code, whereas Framework is structure of application or website.
+
+● What is CDN? Why do we use it?
+CDN -Content Delivery Network is place where react library is hosted.
+The react code written by FB developers in vanilla JS are hosted here.
+Users can use it to bring React into project by copying certain Script tags and access React functions.
+
+● Why is React known as React?
+React is known as so because it reacts with the changes in the state and data of an application so the website is renderd in effecient 
+and declarative manner.
+
+● What is crossorigin in script tag?
+Cross origin script tag enables Cross Origin Resource Sharing(CORS).
+Cross Origin Script tag is used to access resources from external files from different origin than the hosting website.
+This allows the script to access resources from the server hosting script such as making HTTP requests or accessing data.
+It is used in script tag while using react CDN after react 16 and supports better error handling.
+
+● What is diference between React and ReactDOM?
+React is plain vanilla JS used to access Core react functions where React DOM acts as bridge between react and browser where it puts the elements 
+into DOM.
+
+● What is difference between react.development.js and react.production.js files via CDN?
+react.production.js files via CDN is optimized,effecient version of react.development.js which is used for production by eliminating certain things.
+
+● What is async and defer? - see my Youtube video ;)
+Async and Defer are the boolean attributes which are used in script tag to fetch the external resources
+Any website loading will have two parts :1.HTML Parsing 2.Loading the script tag
+2.Loading the script tag can divided into fetching the script tag and executing the script tag.
+This can be done by using normal script tag, by using async and by using defer.
+
+Normal script tag
+<script src="">
+Here, the website loading starts with HTML Parsing, as soon as it encounters script tag it fetches the script tag and excutes it immediately 
+after fetching and all this while HTML Parsing is halted and continued only after execution of script tag.
+
+Using Async 
+<script async src="">
+Here, once script tag is encountered while HTML Parsing it is fetched while NOT HALTING HTML Parsing BUT PARALLELY ALONG WITH IT but once the fetching 
+is done it pauses html parsing to execute the script.
+Async doesnt guarentee the order of execution.
+Eg:In case of multiple async tag used and which may have dependencies on the execution of first one, there is no guarentee which can be exceuted first
+Can used in case of Google Analytics script.
+
+
+Using Defer
+<script defer src="">
+Here script tags are fetched parallely while HTML parsing but execution is done ONLY ONCE AFTER ALL HTML PARSING IS COMPLETED.
+so, there is no htmlparsing blocked either while fetching or execution of script.
+Defer ensures the order of execution.
+
